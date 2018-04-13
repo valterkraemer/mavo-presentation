@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+
+  <script src="../mavo-firebase/src/firebase.js"></script>
+
+  <script src="https://get.mavo.io/0.1.5/mavo.es5.min.js"></script>
+  <link rel="stylesheet" href="https://get.mavo.io/0.1.5/mavo.css">
+
+  <script src="../mavo-offline/src/mavo-offline.js"></script>
+  <script src="../mavo-firebase/src/mavo-firebase.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <main mv-app="presentation"
+    mv-storage="offline?https://mavo-presentation.firebaseio.com"
+    mv-firebase-api-key="AIzaSyCU7aYHRKzYsk_1aqqP_pk7GsefpHPI3Bo"
+    mv-firebase-auth-domain="mavo-presentation.firebaseapp.com"
+    mv-unauthenticated-permissions="read edit login"
+    mv-autosave="0">
+
+    <div class="mv-bar mv-ui">
+      <div class="offline-status"></div>
+    </div>
+
+    <input autofocus id="slide-input" type="text" property="slideText">
+
+    <img src="slides/Presentation.0[if(mod(max(0, len(slideText) - 1), 16) >= 9, '', '0')][mod(max(0, len(slideText) - 1), 16) + 1].png">
+  </main>
+
+</body>
+</html>
