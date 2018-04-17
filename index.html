@@ -27,7 +27,7 @@
 
     <input autofocus id="slide-input" type="text" property="slideText">
 
-    <img src="slides/Presentation.0[if(mod(max(0, len(slideText) - 1), 16) >= 9, '', '0')][mod(max(0, len(slideText) - 1), 16) + 1].png">
+    <img src="slides/slides.[max(1, mod(len(slideText), 19))].png">
   </main>
 
 </body>
